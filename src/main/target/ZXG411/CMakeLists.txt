@@ -1,0 +1,7 @@
+# ZXG411飞控板编译配置
+
+# 配置OSD版本 - 使用STM32F411处理器，外部晶振25MHz
+target_stm32f411xe(ZXG411_OSD HSE_MHZ 25 SKIP_RELEASES)
+
+# 配置黑盒子版本 - 使用STM32F411处理器，外部晶振25MHz
+target_stm32f411xe(ZXG411_BLACKBOX HSE_MHZ 25 SKIP_RELEASES) 

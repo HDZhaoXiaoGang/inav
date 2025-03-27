@@ -31,7 +31,7 @@
 #define SPI1_MOSI_PIN           PA7
 
 #define USE_IMU_MPU6500
-#define IMU_MPU6500_ALIGN       CW0_DEG
+#define IMU_MPU6500_ALIGN       CW270_DEG_FLIP
 #define MPU6500_CS_PIN          PA4
 #define MPU6500_SPI_BUS         BUS_SPI1
 
@@ -68,7 +68,11 @@
 
 #define USE_MAG
 #define MAG_I2C_BUS             BUS_I2C1
-#define USE_MAG_ALL
+#define USE_MAG_QMC5883L
+#define MAG_QMC5883L_ALIGN      CW90_DEG_FLIP
+#define USE_MAG_HMC5883L
+#define MAG_HMC5883L_ALIGN      CW90_DEG_FLIP
+
 
 #define TEMPERATURE_I2C_BUS     BUS_I2C1
 
@@ -86,7 +90,9 @@
 // ***************  OTHERS *************************
 #define DEFAULT_FEATURES        ( FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TELEMETRY )
 
-#define CURRENT_METER_SCALE     423 
+#define CURRENT_METER_SCALE     2000
+#define VBAT_SCALE              1100
+
 
 #define TARGET_IO_PORTA         0xffff
 #define TARGET_IO_PORTB         0xffff

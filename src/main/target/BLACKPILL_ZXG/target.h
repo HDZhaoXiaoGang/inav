@@ -68,10 +68,7 @@
 
 #define USE_MAG
 #define MAG_I2C_BUS             BUS_I2C1
-#define USE_MAG_QMC5883L
-#define MAG_QMC5883L_ALIGN      CW90_DEG_FLIP
-#define USE_MAG_HMC5883L
-#define MAG_HMC5883L_ALIGN      CW90_DEG_FLIP
+#define USE_MAG_ALL
 
 
 #define TEMPERATURE_I2C_BUS     BUS_I2C1

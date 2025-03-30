@@ -35,6 +35,18 @@
 #define MPU6500_CS_PIN          PA4
 #define MPU6500_SPI_BUS         BUS_SPI1
 
+// *************** SPI2 Flash **********************
+#define USE_SPI_DEVICE_2
+#define SPI2_SCK_PIN            PB13
+#define SPI2_MISO_PIN           PB14
+#define SPI2_MOSI_PIN           PB15
+
+#define USE_FLASHFS
+#define USE_FLASH_M25P16
+#define M25P16_CS_PIN           PB12
+#define M25P16_SPI_BUS          BUS_SPI2
+#define ENABLE_BLACKBOX_LOGGING_ON_SPIFLASH_BY_DEFAULT
+
 // *************** UART *****************************
 #define USE_UART1
 #define UART1_TX_PIN            PA9
@@ -96,4 +108,4 @@
 #define TARGET_IO_PORTC         0xffff
 #define TARGET_IO_PORTD         (BIT(2))
 
-#define MAX_PWM_OUTPUT_PORTS       6
+#define MAX_PWM_OUTPUT_PORTS       8

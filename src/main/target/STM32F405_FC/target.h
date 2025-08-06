@@ -113,7 +113,7 @@
 #define CURRENT_METER_ADC_CHANNEL   ADC_CHN_2
 
 // *************** PWM输出 ************************
-#define MAX_PWM_OUTPUT_PORTS       7
+#define MAX_PWM_OUTPUT_PORTS       6  // S7已禁用
 
 // *************** 备用电机控制端口 ****************
 #define USE_PINIO

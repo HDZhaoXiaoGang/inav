@@ -1,1 +1,2 @@
-target_stm32f405xe(STM32F405_FC HSE_MHZ 8 SKIP_RELEASES) 
+target_stm32f405xg(STM32F405_FC HSE_MHZ 8)
+# cd /Users/zhihu/Documents/open/inav/build && rm -rfy * && cmake .. && make STM32F405_FC

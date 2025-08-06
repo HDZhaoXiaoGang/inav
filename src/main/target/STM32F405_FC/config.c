@@ -19,12 +19,13 @@
 
 #include "platform.h"
 #include "drivers/io.h"
-
+#include "fc/config.h"
+#include "fc/fc_msp_box.h"
+#include "io/piniobox.h"
 #include "drivers/pwm_mapping.h"
 #include "drivers/timer.h"
 #include "drivers/bus.h"
-
-#include "config/config.h"
+#include "io/serial.h"
 
 void targetConfiguration(void)
 {

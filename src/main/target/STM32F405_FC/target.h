@@ -54,8 +54,8 @@
 #define USE_VCP
 
 #define USE_UART1
-#define UART1_TX_PIN            PA10
-#define UART1_RX_PIN            PA11
+#define UART1_TX_PIN            PA9
+#define UART1_RX_PIN            PA10
 
 #define USE_UART2
 #define UART2_TX_PIN            PA2

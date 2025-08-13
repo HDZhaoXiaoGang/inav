@@ -35,8 +35,6 @@ timerHardware_t timerHardware[] = {
     // 备用电机控制端口
     DEF_TIM(TIM3,  CH3, PB0,  TIM_USE_ANY, 0, 0), // MS1
     DEF_TIM(TIM3,  CH4, PB1,  TIM_USE_ANY, 0, 0), // MS2
-    DEF_TIM(TIM8,  CH4, PC9,  TIM_USE_ANY, 0, 0), // MS3
-    DEF_TIM(TIM1,  CH1, PA8,  TIM_USE_ANY, 0, 0), // MS4
 
     // UART引脚
     DEF_TIM(TIM5,  CH3, PA2,  TIM_USE_ANY, 0, 0), // UART2_TX

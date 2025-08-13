@@ -33,5 +33,4 @@ void targetConfiguration(void)
     pinioBoxConfigMutable()->permanentId[0] = BOX_PERMANENT_ID_USER1;
     pinioBoxConfigMutable()->permanentId[1] = BOX_PERMANENT_ID_USER2;
     pinioBoxConfigMutable()->permanentId[2] = BOX_PERMANENT_ID_USER3;
-    pinioBoxConfigMutable()->permanentId[3] = BOX_PERMANENT_ID_USER4;
 } 

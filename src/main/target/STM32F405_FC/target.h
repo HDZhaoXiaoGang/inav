@@ -23,9 +23,6 @@
 #define LED0                    PC13
 #define LED1                    PC14
 
-#define BEEPER                  PB2
-#define BEEPER_INVERTED
-
 // *************** SPI1 MPU6500 Gyro & ACC **********************
 #define USE_SPI
 #define USE_SPI_DEVICE_1
@@ -38,7 +35,7 @@
 #define IMU_MPU6500_ALIGN       CW0_DEG
 #define MPU6500_CS_PIN          PA4
 #define MPU6500_SPI_BUS         BUS_SPI1
-#define MPU6500_EXTL_PIN        PC3  // 外部中断引脚
+#define MPU6500_EXTL_PIN        PC3
 
 // *************** SPI2 AT7456E OSD *****************************
 #define USE_SPI_DEVICE_2
@@ -51,8 +48,6 @@
 #define MAX7456_CS_PIN          PB12
 
 // *************** UART *****************************
-#define USE_VCP
-
 #define USE_UART1
 #define UART1_TX_PIN            PA9
 #define UART1_RX_PIN            PA10
@@ -77,11 +72,7 @@
 #define UART6_TX_PIN            PC6
 #define UART6_RX_PIN            PC7
 
-#define SERIAL_PORT_COUNT       7
-
-#define DEFAULT_RX_TYPE         RX_TYPE_SERIAL
-#define SERIALRX_PROVIDER       SERIALRX_CRSF  // ELRS使用CRSF协议
-#define SERIALRX_UART           SERIAL_PORT_USART5  // 使用UART5连接ELRS接收机
+#define SERIAL_PORT_COUNT       6
 
 // *************** I2C /Baro/Mag ********************
 #define USE_I2C
@@ -106,27 +97,26 @@
 #define ADC_INSTANCE                ADC1
 #define ADC1_DMA_STREAM             DMA2_Stream0
 
-#define ADC_CHANNEL_1_PIN           PC4  // VBAT
+#define ADC_CHANNEL_1_PIN           PA1  // VBAT
 #define ADC_CHANNEL_2_PIN           PC5  // CURR
 
 #define VBAT_ADC_CHANNEL            ADC_CHN_1
 #define CURRENT_METER_ADC_CHANNEL   ADC_CHN_2
 
 // *************** PWM输出 ************************
-#define MAX_PWM_OUTPUT_PORTS       6  // S7已禁用
+#define MAX_PWM_OUTPUT_PORTS       6
 
 // *************** 备用电机控制端口 ****************
 #define USE_PINIO
 #define USE_PINIOBOX
-#define PINIO1_PIN                  PB0  // MS1
-#define PINIO2_PIN                  PB1  // MS2
-#define PINIO3_PIN                  PC9  // MS3
-#define PINIO4_PIN                  PA8  // MS4
+#define PINIO1_PIN                  PC2  // PIN1
+#define PINIO2_PIN                  PB0  // MS1
+#define PINIO3_PIN                  PB1  // MS2
 
 // ***************  OTHERS *************************
 #define DEFAULT_FEATURES        (FEATURE_TX_PROF_SEL | FEATURE_OSD | FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TELEMETRY)
 
-#define CURRENT_METER_SCALE     423 
+#define CURRENT_METER_SCALE     200 
 
 #define USE_DSHOT
 #define USE_ESC_SENSOR

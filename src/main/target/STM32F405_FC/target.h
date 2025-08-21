@@ -32,7 +32,7 @@
 #define SPI1_MOSI_PIN           PA7
 
 #define USE_IMU_MPU6500
-#define IMU_MPU6500_ALIGN       CW0_DEG
+#define IMU_MPU6500_ALIGN       CW0_DEG_FLIP
 #define MPU6500_CS_PIN          PA4
 #define MPU6500_SPI_BUS         BUS_SPI1
 #define MPU6500_EXTL_PIN        PC3
@@ -88,7 +88,7 @@
 
 #define USE_MAG
 #define MAG_I2C_BUS             BUS_I2C1
-#define USE_MAG_QMC5883L
+#define USE_MAG_ALL 
 
 #define TEMPERATURE_I2C_BUS     BUS_I2C1
 
@@ -104,19 +104,23 @@
 #define CURRENT_METER_ADC_CHANNEL   ADC_CHN_2
 
 // *************** PWM输出 ************************
-#define MAX_PWM_OUTPUT_PORTS       6
+#define MAX_PWM_OUTPUT_PORTS       8
 
-// *************** 备用电机控制端口 ****************
+// *************** 有刷电机支持 ******************
+#define USE_BRUSHED_ESC_AUTODETECT
+#define TARGET_MOTOR_COUNT          2
+#define BRUSHED_MOTORS
+
+// *************** PINIO ****************
 #define USE_PINIO
 #define USE_PINIOBOX
 #define PINIO1_PIN                  PC2  // PIN1
-#define PINIO2_PIN                  PB0  // MS1
-#define PINIO3_PIN                  PB1  // MS2
+
 
 // ***************  OTHERS *************************
 #define DEFAULT_FEATURES        (FEATURE_TX_PROF_SEL | FEATURE_OSD | FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TELEMETRY)
 
-#define CURRENT_METER_SCALE     200 
+#define CURRENT_METER_SCALE     2000 
 
 #define USE_DSHOT
 #define USE_ESC_SENSOR

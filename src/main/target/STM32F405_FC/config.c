@@ -26,11 +26,31 @@
 #include "drivers/timer.h"
 #include "drivers/bus.h"
 #include "io/serial.h"
+#include "drivers/pwm_esc_detect.h"
+
+// 有刷电机PWM频率定义
+#define BRUSHED_MOTORS_PWM_RATE 16000  // 16kHz
 
 void targetConfiguration(void)
 {
     // 配置PINIO
     pinioBoxConfigMutable()->permanentId[0] = BOX_PERMANENT_ID_USER1;
-    pinioBoxConfigMutable()->permanentId[1] = BOX_PERMANENT_ID_USER2;
-    pinioBoxConfigMutable()->permanentId[2] = BOX_PERMANENT_ID_USER3;
+
+
+#ifdef BRUSHED_MOTORS
+    // 设置有刷电机PWM频率
+    motorConfigMutable()->motorPwmRate = BRUSHED_MOTORS_PWM_RATE;
+    
+    // 设置默认电机协议为有刷模式
+    motorConfigMutable()->motorPwmProtocol = PWM_TYPE_BRUSHED;
+    
+    // 启用有刷电机自动检测
+    #ifdef USE_BRUSHED_ESC_AUTODETECT
+    detectBrushedESC();
+    if (hardwareMotorType == MOTOR_BRUSHED) {
+        motorConfigMutable()->motorPwmProtocol = PWM_TYPE_BRUSHED;
+        motorConfigMutable()->motorPwmRate = BRUSHED_MOTORS_PWM_RATE;
+    }
+    #endif
+#endif
 } 

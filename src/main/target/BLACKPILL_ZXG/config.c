@@ -33,4 +33,10 @@ void targetConfiguration(void)
     // 设置 MSP 波特率为 115200
     serialConfigMutable()->portConfigs[findSerialPortIndexByIdentifier(SERIAL_PORT_USART1)].msp_baudrateIndex = BAUD_115200;
 
+    // 配置空心杯电机 - PA1使用16kHz PWM直接驱动
+    motorConfigMutable()->motorPwmProtocol = PWM_TYPE_BRUSHED;
+    motorConfigMutable()->motorPwmRate = 16000;  // 16kHz PWM频率
+    motorConfigMutable()->maxthrottle = 2000;    // 最大油门值
+    motorConfigMutable()->mincommand = 1000;     // 最小命令值
+
 }

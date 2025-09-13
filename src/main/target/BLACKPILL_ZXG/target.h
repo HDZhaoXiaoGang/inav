@@ -81,12 +81,9 @@
 
 #define ADC_CHANNEL_1_PIN           PB0
 #define ADC_CHANNEL_2_PIN           PB1
-#define ADC_CHANNEL_3_PIN           PA2
 
 #define VBAT_ADC_CHANNEL            ADC_CHN_1
 #define CURRENT_METER_ADC_CHANNEL   ADC_CHN_2
-#define RSSI_ADC_CHANNEL            ADC_CHN_3
-
 
 // ***************  OTHERS *************************
 #define DEFAULT_FEATURES        ( FEATURE_CURRENT_METER | FEATURE_VBAT | FEATURE_TELEMETRY )
@@ -100,5 +97,5 @@
 #define TARGET_IO_PORTC         0xffff
 #define TARGET_IO_PORTD         (BIT(2))
 
-#define MAX_PWM_OUTPUT_PORTS       8
+#define MAX_PWM_OUTPUT_PORTS       7
 

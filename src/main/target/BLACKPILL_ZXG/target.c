@@ -24,12 +24,12 @@
 #include "drivers/pinio.h"
 
 timerHardware_t timerHardware[] = {
-    DEF_TIM(TIM2,  CH2, PA1,  TIM_USE_OUTPUT_AUTO, 0, 0), // Hollow Cup Motor 16kHz PWM
+    DEF_TIM(TIM2,  CH2, PA1,  TIM_USE_OUTPUT_AUTO, 0, 0), // Hollow Cup Motor 32kHz PWM
     DEF_TIM(TIM4,  CH2, PB7,  TIM_USE_OUTPUT_AUTO, 0, 0), // Motor 2
     DEF_TIM(TIM4,  CH1, PB6,  TIM_USE_OUTPUT_AUTO, 0, 0), // Motor 3
     DEF_TIM(TIM3,  CH2, PB5,  TIM_USE_OUTPUT_AUTO, 0, 0), // Motor 4
     DEF_TIM(TIM3,  CH1, PB4,  TIM_USE_OUTPUT_AUTO, 0, 0), // Motor 5
-    DEF_TIM(TIM2,  CH2, PB3,  TIM_USE_OUTPUT_AUTO, 0, 0), // Motor 6
+    DEF_TIM(TIM2,  CH3, PB3,  TIM_USE_OUTPUT_AUTO, 0, 0), // Motor 6 (修复：使用TIM2 CH3)
     DEF_TIM(TIM2,  CH1, PA15, TIM_USE_OUTPUT_AUTO, 0, 0), // Motor 7
 };
 

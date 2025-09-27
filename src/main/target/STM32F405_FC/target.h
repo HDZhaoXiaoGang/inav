@@ -32,7 +32,7 @@
 #define SPI1_MOSI_PIN           PA7
 
 #define USE_IMU_MPU6500
-#define IMU_MPU6500_ALIGN       CW0_DEG_FLIP
+#define IMU_MPU6500_ALIGN       CW180_DEG_FLIP
 #define MPU6500_CS_PIN          PA4
 #define MPU6500_SPI_BUS         BUS_SPI1
 #define MPU6500_EXTL_PIN        PC3
@@ -104,12 +104,7 @@
 #define CURRENT_METER_ADC_CHANNEL   ADC_CHN_2
 
 // *************** PWM输出 ************************
-#define MAX_PWM_OUTPUT_PORTS       8
-
-// *************** 有刷电机支持 ******************
-#define USE_BRUSHED_ESC_AUTODETECT
-#define TARGET_MOTOR_COUNT          2
-#define BRUSHED_MOTORS
+#define MAX_PWM_OUTPUT_PORTS       6
 
 // *************** PINIO ****************
 #define USE_PINIO

@@ -24,8 +24,6 @@
 #include "drivers/pinio.h"
 
 timerHardware_t timerHardware[] = {
-    DEF_TIM(TIM3,  CH3, PB0,  TIM_USE_MOTOR, 0, 0), // MS1 - 有刷电机1
-    DEF_TIM(TIM3,  CH4, PB1,  TIM_USE_MOTOR, 0, 0), // MS2 - 有刷电机2
     DEF_TIM(TIM2,  CH2, PB3,  TIM_USE_OUTPUT_AUTO, 0, 0), // S1  D(1,7,3)
     DEF_TIM(TIM3,  CH1, PB4,  TIM_USE_OUTPUT_AUTO, 0, 0), // S2  D(1,4,5)
     DEF_TIM(TIM3,  CH2, PB5,  TIM_USE_OUTPUT_AUTO, 0, 0), // S3  D(1,5,5)

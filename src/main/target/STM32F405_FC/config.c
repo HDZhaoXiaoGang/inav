@@ -35,22 +35,4 @@ void targetConfiguration(void)
 {
     // 配置PINIO
     pinioBoxConfigMutable()->permanentId[0] = BOX_PERMANENT_ID_USER1;
-
-
-#ifdef BRUSHED_MOTORS
-    // 设置有刷电机PWM频率
-    motorConfigMutable()->motorPwmRate = BRUSHED_MOTORS_PWM_RATE;
-    
-    // 设置默认电机协议为有刷模式
-    motorConfigMutable()->motorPwmProtocol = PWM_TYPE_BRUSHED;
-    
-    // 启用有刷电机自动检测
-    #ifdef USE_BRUSHED_ESC_AUTODETECT
-    detectBrushedESC();
-    if (hardwareMotorType == MOTOR_BRUSHED) {
-        motorConfigMutable()->motorPwmProtocol = PWM_TYPE_BRUSHED;
-        motorConfigMutable()->motorPwmRate = BRUSHED_MOTORS_PWM_RATE;
-    }
-    #endif
-#endif
 } 
